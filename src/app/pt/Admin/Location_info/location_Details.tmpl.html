@@ -1,0 +1,51 @@
+<md-content>
+
+<div class=" md-whiteframe-z1" layout="column">
+
+        <md-divider></md-divider>
+        <tri-widget style="background-color: #00b0e8;margin-top:-20px;" layout-align-gt-lg="row">
+            <div layout="column">
+               <div flex layout-align="left">
+                <md-button ng-click="vm.backbutton()">
+                    <md-icon md-font-icon="zmdi zmdi-long-arrow-left"></md-icon>
+                </md-button>
+            </div>
+                <h2>Instructor List</h2>
+            <md-divider></md-divider>
+            <div style="background-color: cadetblue" content-layout="row">
+                <md-list >
+
+                    <md-list-item
+                        ng-repeat="item in vm.items">
+                        <img class="md-avatar" ng-src="assets/images/avatars/avatar-3.png">
+                        <p>{{item.Name}}</p>
+                        <md-icon md-font-icon="zmdi zmdi-chat" class="md-primary"></md-icon>
+                        <md-divider ng-hide="$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+                </div>
+            </div>
+        </tri-widget>
+
+
+        <tri-widget  style="background-color: #00b0e8;margin-top: 10px;"layout-align-gt-lg="column">
+            <h2>Student List</h2>
+            <md-divider></md-divider>
+            <div style="background-color: cadetblue" content-layout="row">
+                <md-list>
+                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat md-3-line"
+                        ng-repeat="x in vm.students">
+                        <img class="md-avatar" ng-src="assets/images/avatars/avatar-6.png">
+                        <p>{{x.firstName}}</p>
+                        <md-icon md-font-icon="zmdi zmdi-chat" class="md-primary"></md-icon>
+                        <md-divider ng-hide="$last"></md-divider>
+                    </md-list-item>
+
+                </md-list>
+               </div>
+        </tri-widget>
+
+
+
+    </div>
+    </md-content>

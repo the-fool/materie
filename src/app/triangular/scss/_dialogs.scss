@@ -1,0 +1,10 @@
+.mobile-fullwidth-dialog {
+  // max-width: none;
+}
+$layout-breakpoint-xs: 350;
+@media (max-width: $layout-breakpoint-xs) {
+  .mobile-fullwidth-dialog {
+    max-width: 100%;
+    min-height: 100%;
+  }
+}

@@ -1,0 +1,89 @@
+
+<div layout-margin="10" >
+
+    <tri-widget md-scroll-shrink   background-image="assets/images/avatars/avatar-4.png"  style="height:450px;">
+
+        <div layout-align="row">
+
+            <div layout="row">
+                <div flex layout-align="left">
+                    <md-button ng-click="vm.backbutton()">
+                        <md-icon md-font-icon="zmdi zmdi-long-arrow-left"></md-icon>
+                    </md-button>
+                </div>
+                <div flex style="margin-left: 300px;">
+                    <md-menu>
+                        <md-button class="md-icon-button" aria-label="Open email interactions menu" ng-click="menuClick($event);$mdOpenMenu();">
+                            <md-icon md-font-icon="zmdi zmdi-more-vert"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-divider></md-menu-divider>
+                        </md-menu-content>
+
+                    </md-menu>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <h2 style="margin-top: 350px;margin-left: 10px;"><u>Name :<em>{{vm.item.Name}}</em></u></h2>
+    </tri-widget>
+
+    <div class="widget-blog-text" ng-cloak="">
+        <md-fab-speed-dial md-direction="left" class="md-fling" style="margin-top: -40px;margin-left: 200px;">
+            <md-fab-trigger>
+                <md-button aria-label="share this post" class="md-fab md-warn">
+                    <md-icon md-font-icon="zmdi zmdi-filter-list"></md-icon>
+                </md-button>
+            </md-fab-trigger>
+            <md-fab-actions>
+                <md-button aria-label="twitter" class="md-fab md-raised md-mini"
+                           ng-click="share('Shared on Twitter', $event)">
+                    <md-icon md-font-icon="fa fa-twitter"></md-icon>
+                </md-button>
+                <md-button aria-label="facebook" class="md-fab md-raised md-mini"
+                           ng-click="share('Shared on Facebook', $event)">
+                    <md-icon md-font-icon="fa fa-facebook"></md-icon>
+                </md-button>
+                <md-button aria-label="google-plus" class="md-fab md-raised md-mini"
+                           ng-click="share('Shared on Google+', $event)">
+                    <md-icon md-font-icon="fa fa-google-plus"></md-icon>
+                </md-button>
+            </md-fab-actions>
+        </md-fab-speed-dial >
+
+
+        <tri-widget style="background-color: #1c9aa0;margin-top:-20px;">
+            <h3>About us</h3>
+            <md-divider></md-divider>
+            <div style="background-color: #ffffff">
+                <h4><b>Style:</b>{{vm.item.Style}}</h4>
+                <h4><b>Date of join:</b>{{vm.item.Id}}</h4>
+                <h4><b>Phone Number: </b>#############</h4>
+            </div>
+        </tri-widget>
+
+
+        <tri-widget style="background-color: #1c9aa0;margin-top: 10px;">
+            <h2>Student List</h2>
+            <md-divider></md-divider>
+            <div style="background-color: #ffffff" content-layout="row">
+                <md-list flex>
+
+                    <md-list-item ng-repeat="x in vm.students">
+                        <img class="md-avatar" ng-src="assets/images/avatars/avatar-4.png">
+                        <p>{{x.firstName}}</p>
+                        <md-icon md-font-icon="zmdi zmdi-chat" class="md-primary"></md-icon>
+                        <md-divider ng-hide="$last"></md-divider>
+                    </md-list-item>
+
+                </md-list>
+            </div>
+        </tri-widget>
+
+    </div>
+
+</div>

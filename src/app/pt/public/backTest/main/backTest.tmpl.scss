@@ -1,0 +1,162 @@
+excel-stand-in, browser-app{
+  height: 100vh;
+}
+
+browser-app{
+  background-color: #000;
+  padding-left : 0px !important;
+  padding-right : 0px !important;}
+
+#footer{
+  visibility: hidden;
+}
+
+
+.buttonText{
+    position:  absolute;
+    top:  1.5vh;
+    left:  1.5vw;
+}
+
+
+.highlighted{
+  border: 1px solid orange;
+}
+
+
+.main-content-heading{
+  color: white;
+  font-size: 2.5em;
+  text-align: center;
+  font-family: HelveticaNeue-Medium,"Helvetica Neue Medium","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+@mixin align {
+    position: relative;
+    // top: 40vh;
+    // -webkit-transform: translateY(-50%);
+    // -ms-transform: translateY(-50%);
+    // transform: translateY(-50%);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin alignFillForm {
+    position: relative;
+    // top: 40vh;
+    // -webkit-transform: translateY(-50%);
+    // -ms-transform: translateY(-50%);
+    // transform: translateY(-50%);
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.makeQueryButton{
+  // @include horizontal-align();
+
+  @include align();
+  border: 1px solid white;
+  color: white;
+}
+.fillForm{
+  // @include horizontal-align();
+
+  @include alignFillForm();
+  border: 1px solid white;
+  color: white;
+}
+
+#main-content-holder{
+  display: block;
+}
+.main-chart{
+  min-height: 40vh;
+  border: 3px solid #333;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  top: 0;
+
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #333;
+  shape-rendering: crispEdges;
+}
+.tick text {
+  fill : white;
+}
+
+.x.axis path {
+  // display: none;
+}
+
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+
+@mixin alignStockSelectorRadios {
+    // position: relative;
+    // top: 40vh;
+    // -webkit-transform: translateY(-50%);
+    // -ms-transform: translateY(-50%);
+    // transform: translateY(-50%);
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    transform: translate(-5%, -45%);
+}
+
+#stock-selectors{
+  @include alignStockSelectorRadios();
+
+}
+
+.stockRadioButton{
+  text-align: center;
+  margin-left: 1px;
+  margin-right: 1px;
+  width: 4vw;
+  color: white;
+  display: inline-block
+}
+.radio{
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+
+
+@mixin alignLegViewer{
+  position: absolute;
+  top: 50%;
+  height:50%;
+  overflow-y: scroll;
+  width: 100%;
+  color: #fff;
+  border: 3px solid #ccc;
+}
+
+#individual-leg-viewer{
+  @include alignLegViewer
+}
+
+.individual-leg{
+  border: 1px solid #ccc;
+  height: 20vh;
+  width: 100%;
+}
+.tableTD{
+  height: 7.5vh;
+  width:25vw;
+}

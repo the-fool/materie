@@ -1,0 +1,10 @@
+
+
+<button ng-if="firstQuery" ng-click="makeQuery(requestObject)" class="makeQueryButton btn btn-primary">make query</button>
+<button ng-if="firstQuery" ng-click="fillForm()" class="fillForm btn btn-primary">fill form</button>
+
+<div id="main-app" ng-hide="firstQuery">
+  <div class="main-content-heading">Stragegy Overview: </div>
+  <main-chart chart-params="mainChartParams" id="main-content-holder" content-data="mainContent"></main-chart>
+  <!-- <stock-selectors id="stock-selectors" leg-set="stockList"></stock-selectors> -->
+</div>

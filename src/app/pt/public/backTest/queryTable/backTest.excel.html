@@ -1,0 +1,34 @@
+<h1>QUERY TABLE</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <th ng-repeat="header in table.headers track by $index">{{header}}</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in table.range track by $index">
+      <td class="tableTD" id="{{column + (+row + 1)}}" ng-repeat="column in table.headers track by column">
+        <input  value="queryObj[column][(+row + 1)]" class="col-xs-12" ng-model="queryObj[column][(+row + 1)]" type="text">
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+  <table ng-if="data" class="table table-bordered">
+    <thead>
+      <th ng-repeat="header in queryObj.D ">{{header}}</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="trade in data">
+
+        <td class="tableTD"  ng-repeat="column in queryObj.D">
+          <div>
+            {{trade[column]}}
+          </div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>

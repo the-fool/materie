@@ -1,0 +1,20 @@
+<div layout="row" class="full-height">
+    <!-- left sidebar -->
+
+
+    <!-- main content -->
+    <div id="admin-panel" layout="column" flex>
+        <!-- loading animation -->
+        <tri-loader></tri-loader>
+
+        <!-- top toolbar -->
+        <md-toolbar class="admin-toolbar" md-theme="{{triSkin.elements.toolbar}}" ui-view="toolbar" ng-class="[layout.toolbarSize,layout.toolbarClass]"></md-toolbar>
+
+        <!-- scrollable content -->
+        <div ui-view="content" layout="column" flex class="overflow-hidden"></div>
+
+        <div ui-view="belowContent"></div>
+    </div>
+
+    <!-- right sidebar -->
+</div>
